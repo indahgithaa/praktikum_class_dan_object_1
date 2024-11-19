@@ -1,27 +1,45 @@
 public class Manusia {
-    //atribut
-    static String nama;
+    //atribut/karakteristrik dari objek manusia
+    static String nama; // --> static variable
     private int umur;
     private boolean masihHidup;
 
     Manusia(String nama, int umur, boolean masihHidup) {
-        this.nama = nama;
+        Manusia.nama = nama;
         this.umur = umur;
         this.masihHidup = masihHidup;
     }
 
-    //method
-    void berjalan() {
-        System.out.println(this.nama + " sedang berjalan");
+    //method/action dari objek manusia
+    void printIdentitas() {
+        System.out.println("Nama: " + Manusia.nama);
+        System.out.println("Umur: " + umur);
+        System.out.println("Masih hidup: " + masihHidup);
     }
 
     //getter
     String getNama() {
-        return this.nama;
+        return Manusia.nama;
+    }
+
+    int getUmur() {
+        return umur;
+    }
+
+    boolean getMasihHidup() {
+        return masihHidup;
     }
 
     //setter
     void setNama(String nama) {
-        this.nama = nama;
+        Manusia.nama = nama; //karena nama static (milik si class)
+    }
+
+    void setUmur(int umur) {
+        this.umur = umur;
+    }
+
+    void setMasihHidup(boolean masihHidup) {
+        this.masihHidup = masihHidup;
     }
 }
