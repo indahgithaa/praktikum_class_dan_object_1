@@ -18,19 +18,19 @@ public class Mobil {
     }
 
     public void setKecepatan(int i) {
-        this.kecepatan = (int) rubahKecepatan(i);
+        kecepatan = (int) rubahKecepatan(i);
     }
 
-    private double rubahSekon(double waktu) {
-        return waktu*3600;
+    private double rubahSekon(double w) {
+        return w*3600;
     }
 
     public void setWaktu(double w) {
-        this.waktu = rubahSekon(w);
+        waktu = rubahSekon(w);
     }
 
     private double rubahKecepatan(double speed) {
-        return speed / 3.6;
+        return speed * 1000 / 3600;
     }
 
     public double hitungJarak() {
@@ -42,8 +42,8 @@ public class Mobil {
         System.out.println("mempunyai nomor plat " + noPlat);
         System.out.println("serta memiliki warna " + warna);
         System.out.println("dan mampu menempuh kecepatan " + kecepatan + " m/s");
-        System.out.println("atau " + this.waktu + " sekon");
-        System.out.println("dalam jarak " + hitungJarak() + " meter");
+        System.out.println("dalam waktu " + this.waktu + " sekon");
+        System.out.println("dengan jarak " + hitungJarak() + " meter");
         System.out.println("atau " + hitungJarak() / 1000 + " kilometer");
     }
 }
