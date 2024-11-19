@@ -1,8 +1,8 @@
 public class Manusia {
     //atribut/karakteristrik dari objek manusia
     static String nama; // --> static variable
-    private int umur;
-    private boolean masihHidup;
+    private int umur; // --> instance variable (milik classnya)
+    private boolean masihHidup; // --> instance variable (milik objeknya)
 
     Manusia(String nama, int umur, boolean masihHidup) {
         Manusia.nama = nama;
